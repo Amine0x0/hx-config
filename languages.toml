@@ -1,0 +1,47 @@
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.tailwindcss]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "python"
+language-servers = [ "pyright" ]
+
+[[language]]
+name = "typescript"
+scope = "source.ts"
+injection-regex = "(ts|typescript)"
+file-types = ["ts", "mts", "cts"]
+comment-token = "//"
+language-servers = [ "typescript-language-server" ]
+
+[[language]]
+name = "javascript"
+scope = "source.js"
+file-types = ["js", "mjs", "cjs"]
+language-servers = [ "typescript-language-server" ]
+
+[[language]]
+name = "tsx"
+scope = "source.tsx"
+injection-regex = "(tsx)"
+file-types = ["tsx"]
+comment-token = "//"
+language-servers = [ "typescript-language-server", "tailwindcss" ]
+
+[[language]]
+name = "jsx"
+scope = "source.jsx"
+file-types = ["jsx"]
+language-servers = [ "typescript-language-server", "tailwindcss" ]
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "tailwindcss" ]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss" ]

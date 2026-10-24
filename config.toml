@@ -6,6 +6,10 @@ mouse = false
 idle-timeout = 0
 completion-trigger-len = 1
 completion-timeout = 0
+auto-pairs = true
+
+[editor.soft-wrap]
+enable = true
 
 [editor.cursor-shape]
 insert = "bar"
