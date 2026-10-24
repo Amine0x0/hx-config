@@ -1,0 +1,31 @@
+theme = "my_dracula"
+
+[editor]
+line-number = "relative"
+mouse = false
+idle-timeout = 0
+completion-trigger-len = 1
+completion-timeout = 0
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.insert]
+"C-space" = "completion"
+"A-up" = "move_line_up"
+"A-down" = "move_line_down"
+"j" = {"k" = "normal_mode"}
+[keys.normal]
+"C-space" = "completion"
+"A-up" = "move_line_up"
+"A-down" = "move_line_down"
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 200
+focus-lost = true
